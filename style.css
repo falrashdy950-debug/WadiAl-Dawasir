@@ -24,3 +24,27 @@ p:nth-of-type(1) {
 p:nth-of-type(2) {
   color: #6D4C41;
 }
+/* تنسيق القائمة */
+.hidden { display: none; }
+.show { display: block; background: #f4f4f4; padding: 10px; }
+
+/* تنسيق الزر والعنصر التفاعلي */
+#btn-interact {
+    background-color: #1b5e20;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s; /* حركة بسيطة عند الضغط */
+}
+
+#btn-interact:hover { background-color: #2e7d32; transform: scale(1.1); }
+
+#hover-box {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px dashed #1b5e20;
+    text-align: center;
+    cursor: pointer;
+}
