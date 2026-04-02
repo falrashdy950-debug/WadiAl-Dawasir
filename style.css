@@ -1,50 +1,52 @@
-/* تنسيقات العنوان */
-h1 {
-  color: #5D4037;
-  background-color: #F4E1C1;
-  padding: 20px;
-  text-align: center;
-  border-radius: 12px;
-  font-size: 40px;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
 }
 
-/* تنسيقات كل الفقرات */
-p {
-  font-size: 20px;
-  line-height: 1.8;
-  direction: rtl;       /* يجعل النص كله من اليمين لليسار */
-  text-align: right;    /* محاذاة من اليمين */
-}
-
-/* تخصيص ألوان لكل فقرة إذا حابة */
-p:nth-of-type(1) {
-  color: #2E7D32;
-}
-
-p:nth-of-type(2) {
-  color: #6D4C41;
-}
-/* تنسيق القائمة */
-.hidden { display: none; }
-.show { display: block; background: #f4f4f4; padding: 10px; }
-
-/* تنسيق الزر والعنصر التفاعلي */
-#btn-interact {
+header {
     background-color: #1b5e20;
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s; /* حركة بسيطة عند الضغط */
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-#btn-interact:hover { background-color: #2e7d32; transform: scale(1.1); }
+table {
+    background: white;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
 
-#hover-box {
-    margin-top: 20px;
+.headline1 {
+    background-color: #e8f5e9;
+    color: #1b5e20;
+    font-size: 24px;
     padding: 15px;
-    border: 2px dashed #1b5e20;
+}
+
+h3 { color: #2e7d32; border-bottom: 2px solid #1b5e20; display: inline-block; }
+
+img { border-radius: 5px; }
+
+footer {
     text-align: center;
-    cursor: pointer;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #777;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+/* التفاعل البصري (Hover) */
+#btn-interact:hover {
+    background-color: #2e7d32;
+    transform: scale(1.05);
+    transition: 0.3s;
 }
