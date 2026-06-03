@@ -1,52 +1,148 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة وادي الدواسر الإخبارية</title>
+    <style>
+        /* === هنا قسم التنسيقات والألوان (CSS) === */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+        }
 
-header {
-    background-color: #1b5e20;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
+        header {
+            background-color: #1b5e20;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
 
-table {
-    background: white;
-    border-collapse: collapse;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    overflow: hidden;
-}
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
 
-.headline1 {
-    background-color: #e8f5e9;
-    color: #1b5e20;
-    font-size: 24px;
-    padding: 15px;
-}
+        header p {
+            margin: 10px 0 0 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
 
-h3 { color: #2e7d32; border-bottom: 2px solid #1b5e20; display: inline-block; }
+        /* حاوية النشرة الطويلة المسترسلة */
+        .news-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
 
-img { border-radius: 5px; }
+        /* تنسيق الخبر المسترسل بدون مربعات مقيدة */
+        .news-post {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
 
-footer {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 14px;
-    color: #777;
-    border-top: 1px solid #ddd;
-    padding-top: 10px;
-}
+        .headline1 {
+            color: #1b5e20;
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #1b5e20;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
 
-/* التفاعل البصري (Hover) */
-#btn-interact:hover {
-    background-color: #2e7d32;
-    transform: scale(1.05);
-    transition: 0.3s;
-}
+        .news-text {
+            font-size: 1.15rem;
+            color: #444;
+            text-align: justify;
+        }
+
+        /* تنسيق الصور المندمجة بسلاسة */
+        .news-img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            max-height: 350px;
+            margin: 20px auto 0 auto;
+            border-radius: 5px;
+        }
+
+        /* تنسيق الزر وتفاعله */
+        .btn-wrapper {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        #btn-interact {
+            background-color: #1b5e20;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #btn-interact:hover {
+            background-color: #2e7d32;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #777;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>نشرة أخبار وادي الدواسر الحصرية</h1>
+        <p>تغطية مباشرة لأهم الأنباء التنموية والمحلية</p>
+    </header>
+
+    <div class="news-container">
+
+        <div class="news-post">
+            <h3 class="headline1">عاجل: تدشين مشروع "الواحة الذكية"</h3>
+            <p class="news-text">
+                شهدت محافظة وادي الدواسر انطلاقة كبرى لمشروع الواحة الخضراء الذكية في قلب الوادي، والذي يعد خطوة استراتيجية نحو تحقيق التنمية المستدامة والتحول الرقمي في القطاع الزراعي تماشياً مع رؤية المملكة 2030. يهدف هذا المشروع الطموح إلى إدخال تقنيات الري الذكي القائمة على الذكاء الاصطناعي وإنترنت الأشياء، مما يسهم في خفض استهلاك المياه بنسبة تصل إلى مستويات قياسية مع رفع كفاءة جودة المحاصيل المحلية التي تشتهر بها المنطقة.
+            </p>
+            <img src="" alt="" class="news-img">
+        </div>
+        
+        <div class="news-post">
+            <h3 class="headline1">استعدادات مهرجان التراث والتمور السنوي</h3>
+            <p class="news-text">
+                بدأت اللجان المنظمة بمحافظة وادي الدواسر في تجهيز وتهيئة القرية التراثية لاستقبال زوار المهرجان السنوي للتمور والتراث، وسط تطلعات واسعة لتسليط الضوء على المقومات السياحية والاقتصادية الفريدة التي تمتلكها المنطقة. يتضمن المهرجان هذا العام حزمة واسعة من الفعاليات الثقافية، والأسواق الشعبية، والأجنحة المخصصة لعرض أجود أنواع التمور التي تنتجها مزارع الوادي، كما يهدف الكرنفال إلى دعم الأسر المنتجة وإحياء الحرف اليدوية القديمة.
+            </p>
+            <img src="" alt="" class="news-img">
+        </div>
+
+    </div>
+
+    <div class="btn-wrapper">
+        <button id="btn-interact" onclick="alert('أهلاً بكِ يا أستاذتي الفاضلة!')">اضغطي هنا يا أبلة</button>
+    </div>
+
+    <footer>
+        تصميم الطالبة المبدعة: <strong>إيمان سالم</strong>
+    </footer>
+
+</body>
+</html>
