@@ -5,149 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>بوابة وادي الدواسر الإخبارية</title>
     <style>
-        /* إعدادات الخطوط والخلفية العامة */
+        /* إعدادات الخطوط والخلفية الإخبارية */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
+            background-color: #fcfdfc; /* خلفية فاتحة ومريحة للقراءة */
+            color: #2b2b2b;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            line-height: 1.8;
         }
 
-        /* تنسيق الهيدر (رأس الصفحة) */
+        /* تنسيق رأس الصحيفة */
         header {
-            background: linear-gradient(135deg, #004d40, #00796b);
+            background-color: #004d40;
             color: white;
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
-            border-radius: 0 0 30px 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            border-bottom: 5px solid #00796b;
         }
 
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: bold;
+            letter-spacing: 1px;
         }
 
         header p {
-            margin: 10px 0 0 0;
-            font-size: 1.1rem;
-            opacity: 0.9;
+            margin: 15px 0 0 0;
+            font-size: 1.2rem;
+            color: #e0f2f1;
         }
 
-        /* حاوية الأخبار المقسمة بشكل عصري بدون جداول قديمة */
-        .container {
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 0 20px;
+        /* حاوية النشرة الإخبارية المسترسلة */
+        .news-stream {
+            max-width: 850px;
+            margin: 40px auto;
+            padding: 0 25px;
         }
 
-        .news-card {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            margin-bottom: 25px;
-            padding: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            transition: transform 0.3s ease;
+        /* تصميم الخبر كسطور مسترسلة بدون مربعات أو حدود */
+        .news-section {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px dashed #b2dfdb; /* فاصل بسيط جداً بين الأخبار */
         }
 
-        .news-card:hover {
-            transform: translateY(-5px);
+        .news-section:last-child {
+            border-bottom: none; /* إلغاء الفاصل لآخر خبر */
         }
 
-        .news-content {
-            flex: 1;
-        }
-
-        .news-content h3 {
+        .news-title {
             color: #004d40;
+            font-size: 1.8rem;
             margin-top: 0;
-            font-size: 1.5rem;
-            border-right: 4px solid #00796b;
-            padding-right: 10px;
-        }
-
-        .news-content p {
-            color: #555;
-            font-size: 1.05rem;
-        }
-
-        /* مربع رمزي بديل للصور المحذوفة لتنسيق المساحة */
-        .image-placeholder {
-            width: 200px;
-            height: 130px;
-            background-color: #e0f2f1;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #00796b;
+            margin-bottom: 15px;
             font-weight: bold;
-            font-size: 0.9rem;
-            border: 2px dashed #00796b;
         }
 
-        /* تنسيق الزر التفاعلي */
+        .news-text {
+            font-size: 1.15rem;
+            color: #333;
+            text-align: justify; /* تنسيق أطراف الكلام لتكون متساوية كالجرائد */
+            margin-bottom: 20px;
+        }
+
+        /* تنسيق الصور لتندمج داخل النص بسلاسة وبدون إطار رمادي */
+        .news-image {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            max-height: 380px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        /* تنسيق الأزرار والفوتر */
         .btn-container {
             text-align: center;
-            margin: 40px 0;
+            margin: 50px 0;
         }
 
         .custom-btn {
-            background: #004d40;
+            background-color: #004d40;
             color: white;
-            padding: 15px 35px;
+            padding: 14px 40px;
             border: none;
-            border-radius: 30px;
+            border-radius: 4px; /* حواف حادة قليلاً لتناسب الطابع الإخباري */
             cursor: pointer;
             font-weight: bold;
             font-size: 1.1rem;
-            box-shadow: 0 4px 10px rgba(0, 77, 64, 0.3);
-            transition: all 0.3s ease;
+            transition: background 0.3s;
         }
 
         .custom-btn:hover {
-            background: #00796b;
-            box-shadow: 0 6px 15px rgba(0, 121, 107, 0.4);
-            transform: scale(1.05);
+            background-color: #00796b;
         }
 
-        /* تنسيق الفوتر (أسفل الصفحة) */
         footer {
             text-align: center;
-            padding: 25px;
-            background: #222;
-            color: #bbb;
+            padding: 30px;
+            background: #1a1a1a;
+            color: #aeaeae;
             font-size: 0.95rem;
-            margin-top: 50px;
         }
 
         footer strong {
             color: #fff;
-        }
-
-        /* متجاوب مع الشاشات الصغيرة (الهواتف) */
-        @media (max-width: 768px) {
-            .news-card {
-                flex-direction: column;
-                text-align: center;
-            }
-            .news-content h3 {
-                border-right: none;
-                border-bottom: 3px solid #00796b;
-                padding-bottom: 5px;
-                padding-right: 0;
-            }
-            .image-placeholder {
-                width: 100%;
-                height: 150px;
-            }
         }
     </style>
 </head>
@@ -155,225 +120,39 @@
 
     <header>
         <h1>نشرة أخبار وادي الدواسر الحصرية</h1>
-        <p>تغطية مباشرة لأهم الأنباء التنموية</p>
+        <p>التقرير التنموي الشامل لأبرز المنجزات والمهرجانات المحلية</p>
     </header>
 
-    <div class="container">
-        <!-- الخبر الأول -->
-        <div class="news-card">
-            <div class="news-content">
-                <h3>عاجل: تدشين مشروع "الواحة الذكية"</h3>
-                <p>انطلاقة كبرى لمشروع الواحة الخضراء الذكية في قلب الوادي، بهدف تعزيز الاستدامة الزراعية باستخدام أحدث التقنيات الرقمية وفق رؤية 2030.</p>
-            </div>
-            <!-- تم حذف رابط الصورة واستبداله بمربع رمزي منسق -->
-            <div class="image-placeholder">صورة المشروع</div>
+    <div class="news-stream">
+
+        <!-- الخبر الأول: مسترسل ومفصل -->
+        <div class="news-section">
+            <h2 class="news-title">تدشين مشروع "الواحة الذكية" لتعزيز الاستدامة الزراعية</h2>
+            <p class="news-text">
+                شهدت محافظة وادي الدواسر انطلاقة كبرى لمشروع الواحة الخضراء الذكية في قلب الوادي، والذي يعد خطوة استراتيجية نحو تحقيق التنمية المستدامة والتحول الرقمي في القطاع الزراعي تماشياً مع رؤية المملكة 2030. يهدف هذا المشروع الطموح إلى إدخال تقنيات الري الذكي القائمة على الذكاء الاصطناعي وإنترنت الأشياء، مما يسهم في خفض استهلاك المياه بنسبة تصل إلى مستويات قياسية مع رفع كفاءة جودة المحاصيل المحلية التي تشتهر بها المنطقة. وتأتي هذه الخطوة بدعم ومتابعة مستمرة من الجهات المعنية لتطوير البنية التحتية الزراعية وجعل الوادي مركزاً إقليمياً رائداً للزراعة الذكية.
+            </p>
+            <!-- إذا كان لديك رابط صورة ضعيه في الـ src، وإذا تركتيه فارغاً فلن يظهر مربع رمادي مشوه -->
+            <img src="" alt="" class="news-image">
         </div>
         
-        <!-- الخبر الثاني -->
-        <div class="news-card">
-            <div class="news-content">
-                <h3>استعدادات مهرجان التراث والتمور</h3>
-                <p>بدأت اللجان المنظمة في تجهيز القرية التراثية لاستقبال زوار المهرجان السنوي، وتسليط الضوء على المقومات السياحية الفريدة للمنطقة.</p>
-            </div>
-            <!-- تم حذف رابط الصورة واستبداله بمربع رمزي منسق -->
-            <div class="image-placeholder">صورة المهرجان</div>
+        <!-- الخبر الثاني: مسترسل ومفصل -->
+        <div class="news-section">
+            <h2 class="news-title">تكثيف الاستعدادات لانطلاق مهرجان التراث والتمور السنوي</h2>
+            <p class="news-text">
+                بدأت اللجان المنظمة بمحافظة وادي الدواسر في تجهيز وتهيئة القرية التراثية لاستقبال زوار المهرجان السنوي للتمور والتراث، وسط تطلعات واسعة لتسليط الضوء على المقومات السياحية والاقتصادية الفريدة التي تمتلكها المنطقة. يتضمن المهرجان هذا العام حزمة واسعة من الفعاليات الثقافية، والأسواق الشعبية، والأجنحة المخصصة لعرض أجود أنواع التمور التي تنتجها مزارع الوادي. كما يهدف الكرنفال إلى دعم الأسر المنتجة وإحياء الحرف اليدوية القديمة، ليكون الوجهة الأولى لعشاق الأصالة والتراث من مختلف مناطق المملكة خلال الأيام القادمة.
+            </p>
+            <!-- صورة الخبر الثاني تندمج مباشرة أسفل النص عند إضافة رابطها -->
+            <img src="" alt="" class="news-image">
         </div>
+
     </div>
 
     <div class="btn-container">
         <button onclick="alert('أهلاً بكِ يا أستاذتي الفاضلة!')" class="custom-btn">اضغطي هنا يا أبلة</button>
     </div>
 
-    <footer><!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بوابة وادي الدواسر الإخبارية</title>
-    <style>
-        /* إعدادات الخطوط والخلفية العامة */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f7f6;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        /* تنسيق الهيدر (رأس الصفحة) */
-        header {
-            background: linear-gradient(135deg, #004d40, #00796b);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-            border-radius: 0 0 30px 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            font-weight: bold;
-        }
-
-        header p {
-            margin: 10px 0 0 0;
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        /* حاوية الأخبار المقسمة بشكل عصري بدون جداول قديمة */
-        .container {
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-
-        .news-card {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            margin-bottom: 25px;
-            padding: 25px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            transition: transform 0.3s ease;
-        }
-
-        .news-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .news-content {
-            flex: 1;
-        }
-
-        .news-content h3 {
-            color: #004d40;
-            margin-top: 0;
-            font-size: 1.5rem;
-            border-right: 4px solid #00796b;
-            padding-right: 10px;
-        }
-
-        .news-content p {
-            color: #555;
-            font-size: 1.05rem;
-        }
-
-        /* مربع رمزي بديل للصور المحذوفة لتنسيق المساحة */
-        .image-placeholder {
-            width: 200px;
-            height: 130px;
-            background-color: #e0f2f1;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #00796b;
-            font-weight: bold;
-            font-size: 0.9rem;
-            border: 2px dashed #00796b;
-        }
-
-        /* تنسيق الزر التفاعلي */
-        .btn-container {
-            text-align: center;
-            margin: 40px 0;
-        }
-
-        .custom-btn {
-            background: #004d40;
-            color: white;
-            padding: 15px 35px;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 10px rgba(0, 77, 64, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .custom-btn:hover {
-            background: #00796b;
-            box-shadow: 0 6px 15px rgba(0, 121, 107, 0.4);
-            transform: scale(1.05);
-        }
-
-        /* تنسيق الفوتر (أسفل الصفحة) */
-        footer {
-            text-align: center;
-            padding: 25px;
-            background: #222;
-            color: #bbb;
-            font-size: 0.95rem;
-            margin-top: 50px;
-        }
-
-        footer strong {
-            color: #fff;
-        }
-
-        /* متجاوب مع الشاشات الصغيرة (الهواتف) */
-        @media (max-width: 768px) {
-            .news-card {
-                flex-direction: column;
-                text-align: center;
-            }
-            .news-content h3 {
-                border-right: none;
-                border-bottom: 3px solid #00796b;
-                padding-bottom: 5px;
-                padding-right: 0;
-            }
-            .image-placeholder {
-                width: 100%;
-                height: 150px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>نشرة أخبار وادي الدواسر الحصرية</h1>
-        <p>تغطية مباشرة لأهم الأنباء التنموية</p>
-    </header>
-
-    <div class="container">
-        <!-- الخبر الأول -->
-        <div class="news-card">
-            <div class="news-content">
-                <h3>عاجل: تدشين مشروع "الواحة الذكية"</h3>
-                <p>انطلاقة كبرى لمشروع الواحة الخضراء الذكية في قلب الوادي، بهدف تعزيز الاستدامة الزراعية باستخدام أحدث التقنيات الرقمية وفق رؤية 2030.</p>
-            </div><img src="https://ibb.co/0pLtccTnا" alt="مهرجان التمور" style="width: 200px; height: 130px; object-fit: cover; border-radius: 10px;">
-        </div>
-        
-        <!-- الخبر الثاني -->
-        <div class="news-card">
-            <div class="news-content">
-                <h3>استعدادات مهرجان التراث والتمور</h3>
-                <p>بدأت اللجان المنظمة في تجهيز القرية التراثية لاستقبال زوار المهرجان السنوي، وتسليط الضوء على المقومات السياحية الفريدة للمنطقة.</p>
-            </div>
-            <!-- تم حذف رابط الصورة واستبداله بمربع رمزي منسق -->
-            <div class="image-placeholder">صورة المهرجان</div>
-        </div>
-    </div>
-
-    <div class="btn-container">
-        <button onclick="alert('أهلاً بكِ  !')" class="custom-btn">اضغطي هنا  </button>
-    </div>
-
     <footer>
-        تصميم الطالبة : <strong>إيمان سالم</strong>
-    </footer>
-
-</body>
-</html>: <strong>إيمان سالم</strong>
+        تصميم الطالبة المبدعة: <strong>إيمان سالم</strong>
     </footer>
 
 </body>
